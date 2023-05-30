@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Pokedex from "./components/Pokedex";
 import { fetchPokemon } from "./api/pokemonApi";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
   const [pokemon, setPokemon] = useState(null);
@@ -14,11 +16,11 @@ function App() {
     getPokemon();
   }, [pokemonId]);
 
-  const handleNextPokemon = () => {
+  const handleProx = () => {
     setPokemonId(pokemonId + 1);
   };
 
-  const handlePreviousPokemon = () => {
+  const handleAnt = () => {
     if (pokemonId > 1) {
       setPokemonId(pokemonId - 1);
     }
@@ -27,11 +29,7 @@ function App() {
   return (
     <div className="App">
       {pokemon && (
-        <Pokedex
-          pokemon={pokemon}
-          onNextPokemon={handleNextPokemon}
-          onPreviousPokemon={handlePreviousPokemon}
-        />
+        <Pokedex pokemon={pokemon} prox={handleProx} ant={handleAnt} />
       )}
     </div>
   );

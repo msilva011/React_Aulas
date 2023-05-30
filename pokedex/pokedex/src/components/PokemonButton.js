@@ -1,10 +1,16 @@
 import React from "react";
 
-function PokemonButton({ onNextPokemon, onPreviousPokemon }) {
+function PokemonButton({ prox, ant }) {
   return (
     <div className="PokemonButtons">
-      <button onClick={onPreviousPokemon}>Pokémon Anterior</button>
-      <button onClick={onNextPokemon}>Próximo Pokémon</button>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-primary" onClick={ant}>
+          Anterior
+        </button>
+        <button type="button" class="btn btn-outline-primary" onClick={prox}>
+          Próximo
+        </button>
+      </div>
     </div>
   );
 }
