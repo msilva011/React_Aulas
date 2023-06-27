@@ -1,0 +1,20 @@
+.add_btn{
+  text-align: right;
+}
+.home_btn{
+  text-align: left;
+}
+
+.container{
+  overflow: auto;
+}
+
+.navL{
+  color:aliceblue;
+  text-decoration: none;
+}
+
+.navLHome{
+  color:gray;
+  text-decoration: none;
+}
